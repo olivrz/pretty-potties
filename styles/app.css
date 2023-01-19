@@ -15,10 +15,6 @@ p {
   font-size: 1.2em;
 }
 
-h1 {
-  margin: 1vmin 2vmin 3vmin 2vmin;
-}
-
 h4 {
   font-weight: normal;
   margin: 0;
@@ -52,7 +48,11 @@ h4 {
 }
 
 .subsection-title {
-  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.faqs {
+  align-items: flex-start !important;
 }
 
 div.page {
@@ -60,12 +60,15 @@ div.page {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  margin: 4vmin 0;
+  min-height: 25vh;
+  max-width: 60vmax;
+  margin: auto;
+  padding-top: 4vh;
 }
 
 div.qa {
-  text-align: center;
-  margin: 0 12vmin 4vmin 12vmin;
+  text-align: left;
+  margin: 2vh 12vmin 4vmin 12vmin;
 }
 
 .question {
@@ -77,7 +80,7 @@ div.qa {
   font-size: 1.1em;
 }
 
-.aboutus-desc {
+.desc {
   margin: 0 12vmin;
   min-height: 40vh;
   text-align: center;
@@ -86,4 +89,25 @@ div.qa {
 
 .calendar-holder {
   margin: 4vmin 0 0 0;
+}
+
+.footer {
+  background-color: #444343;
+  border-top: 1px solid #000;
+  display: flex;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 12vmin;
+  height: 50vmin;
+  width: 100%;
+  align-content: flex-start;
+}
+
+.amplify-divider--horizontal {
+  margin-bottom: 2vh;
 }

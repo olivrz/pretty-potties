@@ -9,7 +9,9 @@ export default function Home() {
         <link rel="icon" href="/public/favicon.ico" />
       </Head>
       <main>
-
+        <div className="page">
+            <h1>Welcome to pretty potties</h1>
+        </div>
       </main>
     </>
   )

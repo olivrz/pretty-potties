@@ -2,6 +2,10 @@ import Calendar from 'react-calendar';
 import React, {useState} from 'react';
 import 'react-calendar/dist/Calendar.css';
 
+const max_years = 2;
+const MAX_DATE = new Date();
+MAX_DATE.setFullYear(MAX_DATE.getFullYear() + max_years);
+
 export default function BookNow() {
     const [calendarVal, onChange] = useState(new Date());
 
@@ -12,8 +16,9 @@ export default function BookNow() {
             <div className="calendar-holder">
                 <Calendar
                     onChange={onChange}
-                    value={calendarVal}
+                    defaultValue={calendarVal}
                     minDate={new Date()}
+                    maxDate={MAX_DATE}
                     minDetail={"year"}
                     selectRange={true}
                     returnValue={"range"}

@@ -6,8 +6,14 @@ const max_years = 2;
 const MAX_DATE = new Date();
 MAX_DATE.setFullYear(MAX_DATE.getFullYear() + max_years);
 
-export default function BookNow() {
-    const [calendarVal, onChange] = useState(new Date());
+const AWS = require('aws-sdk');
+
+export async function getStaticProps(context) {
+
+    const [calendarVal, setDate] = useState(new Date());
+    const [firstName, setFirstName] = useState('First Name');
+    const [lastName, setLastName] = useState('Last Name');
+    const [email, setEmail] = useState('email');
 
     return (
         <div className="page">
@@ -15,7 +21,7 @@ export default function BookNow() {
 
             <div className="calendar-holder">
                 <Calendar
-                    onChange={onChange}
+                    onChange={setDate}
                     defaultValue={calendarVal}
                     minDate={new Date()}
                     maxDate={MAX_DATE}

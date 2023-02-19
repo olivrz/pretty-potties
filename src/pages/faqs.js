@@ -1,4 +1,3 @@
-import {Divider} from "@aws-amplify/ui-react";
 
 const allFaqs = [
     {question: 'How much does it cost to rent Pretty Potty?',
@@ -26,7 +25,6 @@ export default function FAQs() {
             <h1 className="subsection-title qa">Frequently asked questions</h1>
             {allFaqs.map( (obj,index) =>
                 <div className="qa" id={index}>
-                    <Divider orientation="horizontal"/>
                     <h3 className="question">{obj.question}</h3>
                     <h4 className="answer">{obj.answer}</h4>
                 </div>) }

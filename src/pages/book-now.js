@@ -1,6 +1,7 @@
 import Calendar from 'react-calendar';
 import React, {useState} from 'react';
 import 'react-calendar/dist/Calendar.css';
+import { ddbClient } from '../../config/dbconfig.js'
 
 const max_years = 2;
 const MAX_DATE = new Date();
